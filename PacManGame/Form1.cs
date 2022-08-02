@@ -17,6 +17,7 @@ namespace PacManGame
         bool goup, godown, goleft, goright, isGameOver;
         int score, playerSpeed, redGhostSpeed, blueGhostSpeed, yellowGhostX, yellowGhostY;
 
+
         private void labelScore_Click(object sender, EventArgs e)
         {
 
@@ -72,6 +73,10 @@ namespace PacManGame
             {
                 goright = false;
             }
+            if (e.KeyCode == Keys.Enter && isGameOver == true)
+            {
+                resetGame();
+            }
         }
 
 
@@ -105,9 +110,60 @@ namespace PacManGame
             {
                 pacman.Left = 910;
             }
-            if (pacman.Left > 910 )
+            if (pacman.Left > 910)
             {
                 pacman.Left = -10;
+            }
+
+
+            if (pacman.Top < -10)
+            {
+                pacman.Top = 610;
+            }
+            if (pacman.Top > 610)
+            {
+                pacman.Top = -10;
+            }
+
+
+            foreach(Control x in this.Controls)
+            {
+                if(x is PictureBox)
+                {
+                   if ((string)x.Tag == "coin" && x.Visible == true)
+                   {
+                        if (pacman.Bounds.IntersectsWith(x.Bounds))
+                        {
+                            score += 1;
+                            x.Visible = false;
+                        }
+                   }
+                   if((string)x.Tag == "wall")
+                    {
+                        if (pacman.Bounds.IntersectsWith(x.Bounds))
+                        {
+                            gameOver("ban da cham tuong");
+                        }
+                    }
+                    if ((string)x.Tag == "ghot")
+                    {
+                        if (pacman.Bounds.IntersectsWith(x.Bounds))
+                        {
+                            gameOver("ban da thua");
+                        }
+                    }
+
+                }
+            }
+            redGhost.Top += redGhostSpeed;
+
+            if (redGhost.Bounds.IntersectsWith(wall2.Bounds) || redGhost.Bounds.IntersectsWith(wall4.Bounds))
+            {
+                redGhostSpeed = -redGhostSpeed;
+            }
+            if (score == 5)
+            {
+                gameOver("ban da chien thang");
             }
 
 
@@ -139,7 +195,7 @@ namespace PacManGame
             {
                 if(x is PictureBox)
                 {
-                    //x.Visible = false;
+                    x.Visible = true;
                 }
             }
 
@@ -147,7 +203,10 @@ namespace PacManGame
 
         private void gameOver(string message)
         {
+            isGameOver = true;
 
+            TimeGame.Stop();
+            labelScore.Text ="Diem" + score + Environment.NewLine + message;
         }
     }
 }

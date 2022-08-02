@@ -46,10 +46,9 @@
             this.pictureBox80 = new System.Windows.Forms.PictureBox();
             this.pictureBox81 = new System.Windows.Forms.PictureBox();
             this.pictureBox82 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.wall3 = new System.Windows.Forms.PictureBox();
+            this.wall4 = new System.Windows.Forms.PictureBox();
+            this.wall2 = new System.Windows.Forms.PictureBox();
             this.redGhost = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
@@ -123,6 +122,7 @@
             this.pictureBox76 = new System.Windows.Forms.PictureBox();
             this.pictureBox77 = new System.Windows.Forms.PictureBox();
             this.pictureBox78 = new System.Windows.Forms.PictureBox();
+            this.wall1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pacman)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox89)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox90)).BeginInit();
@@ -138,10 +138,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox80)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox81)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox82)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wall3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wall4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wall2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.redGhost)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -215,6 +214,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox76)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox77)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox78)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wall1)).BeginInit();
             this.SuspendLayout();
             // 
             // labelScore
@@ -242,7 +242,7 @@
             this.pacman.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pacman.TabIndex = 112;
             this.pacman.TabStop = false;
-            this.pacman.Tag = "coin";
+            this.pacman.Tag = "pacman";
             // 
             // pictureBox89
             // 
@@ -398,45 +398,35 @@
             this.pictureBox82.TabStop = false;
             this.pictureBox82.Tag = "coin";
             // 
-            // pictureBox3
+            // wall3
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Blue;
-            this.pictureBox3.Location = new System.Drawing.Point(230, 372);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(46, 197);
-            this.pictureBox3.TabIndex = 5;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Tag = "wall";
+            this.wall3.BackColor = System.Drawing.Color.Blue;
+            this.wall3.Location = new System.Drawing.Point(230, 372);
+            this.wall3.Name = "wall3";
+            this.wall3.Size = new System.Drawing.Size(46, 197);
+            this.wall3.TabIndex = 5;
+            this.wall3.TabStop = false;
+            this.wall3.Tag = "wall";
             // 
-            // pictureBox4
+            // wall4
             // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Blue;
-            this.pictureBox4.Location = new System.Drawing.Point(557, 372);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(46, 197);
-            this.pictureBox4.TabIndex = 4;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Tag = "wall";
+            this.wall4.BackColor = System.Drawing.Color.Blue;
+            this.wall4.Location = new System.Drawing.Point(557, 372);
+            this.wall4.Name = "wall4";
+            this.wall4.Size = new System.Drawing.Size(46, 197);
+            this.wall4.TabIndex = 4;
+            this.wall4.TabStop = false;
+            this.wall4.Tag = "wall";
             // 
-            // pictureBox1
+            // wall2
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Blue;
-            this.pictureBox1.Location = new System.Drawing.Point(230, -14);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(46, 197);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Tag = "wall";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Blue;
-            this.pictureBox2.Location = new System.Drawing.Point(557, -14);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(46, 197);
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Tag = "wall";
+            this.wall2.BackColor = System.Drawing.Color.Blue;
+            this.wall2.Location = new System.Drawing.Point(557, -14);
+            this.wall2.Name = "wall2";
+            this.wall2.Size = new System.Drawing.Size(46, 197);
+            this.wall2.TabIndex = 2;
+            this.wall2.TabStop = false;
+            this.wall2.Tag = "wall";
             // 
             // redGhost
             // 
@@ -447,7 +437,7 @@
             this.redGhost.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.redGhost.TabIndex = 113;
             this.redGhost.TabStop = false;
-            this.redGhost.Tag = "coin";
+            this.redGhost.Tag = "ghot";
             // 
             // pictureBox7
             // 
@@ -1245,12 +1235,23 @@
             this.pictureBox78.TabStop = false;
             this.pictureBox78.Tag = "coin";
             // 
+            // wall1
+            // 
+            this.wall1.BackColor = System.Drawing.Color.Blue;
+            this.wall1.Location = new System.Drawing.Point(230, -14);
+            this.wall1.Name = "wall1";
+            this.wall1.Size = new System.Drawing.Size(46, 197);
+            this.wall1.TabIndex = 186;
+            this.wall1.TabStop = false;
+            this.wall1.Tag = "wall";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(885, 554);
+            this.Controls.Add(this.wall1);
             this.Controls.Add(this.pictureBox61);
             this.Controls.Add(this.pictureBox62);
             this.Controls.Add(this.pictureBox63);
@@ -1339,10 +1340,9 @@
             this.Controls.Add(this.pictureBox80);
             this.Controls.Add(this.pictureBox81);
             this.Controls.Add(this.pictureBox82);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.wall3);
+            this.Controls.Add(this.wall4);
+            this.Controls.Add(this.wall2);
             this.Controls.Add(this.labelScore);
             this.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.Name = "Form1";
@@ -1365,10 +1365,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox80)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox81)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox82)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wall3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wall4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wall2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.redGhost)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
@@ -1442,6 +1441,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox76)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox77)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox78)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wall1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1450,10 +1450,9 @@
         #endregion
 
         private System.Windows.Forms.Label labelScore;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox wall2;
+        private System.Windows.Forms.PictureBox wall3;
+        private System.Windows.Forms.PictureBox wall4;
         private System.Windows.Forms.PictureBox pictureBox79;
         private System.Windows.Forms.PictureBox pictureBox80;
         private System.Windows.Forms.PictureBox pictureBox81;
@@ -1543,6 +1542,7 @@
         private System.Windows.Forms.PictureBox pictureBox76;
         private System.Windows.Forms.PictureBox pictureBox77;
         private System.Windows.Forms.PictureBox pictureBox78;
+        private System.Windows.Forms.PictureBox wall1;
     }
 }
 
